@@ -1,0 +1,63 @@
+{
+  "task": "regression",
+  "target": "price_original",
+  "unidad": "USD",
+  "n_train": 32625,
+  "n_test": 8157,
+  "features": [
+    "game_age_years",
+    "positive_ratio",
+    "log_user_reviews",
+    "platform_combo"
+  ],
+  "baseline_mediana": {
+    "MAE": 7.1607,
+    "RMSE": 12.3996,
+    "R2": -0.061
+  },
+  "modelos": {
+    "LinearRegression": {
+      "cv_rmse_mean": 11.3714,
+      "cv_rmse_std": 0.26,
+      "test": {
+        "MAE": 6.9339,
+        "RMSE": 11.5036,
+        "R2": 0.0868
+      }
+    },
+    "RandomForest": {
+      "cv_rmse_mean": 11.2347,
+      "cv_rmse_std": 0.1799,
+      "test": {
+        "MAE": 6.9018,
+        "RMSE": 11.3512,
+        "R2": 0.1109
+      }
+    },
+    "HistGradientBoosting": {
+      "cv_rmse_mean": 11.1086,
+      "cv_rmse_std": 0.1874,
+      "test": {
+        "MAE": 6.792,
+        "RMSE": 11.1949,
+        "R2": 0.1352
+      }
+    },
+    "HistGB_logTarget": {
+      "cv_rmse_mean": 11.5831,
+      "cv_rmse_std": 0.2621,
+      "test": {
+        "MAE": 6.486,
+        "RMSE": 11.7386,
+        "R2": 0.0491
+      }
+    }
+  },
+  "modelo_elegido": "HistGradientBoosting",
+  "metricas_test": {
+    "MAE": 6.792,
+    "RMSE": 11.1949,
+    "R2": 0.1352
+  },
+  "nota_metrica": "MAE/RMSE en USD; R2 adimensional. Target log-transformado internamente."
+}

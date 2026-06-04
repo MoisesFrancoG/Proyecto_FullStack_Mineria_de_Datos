@@ -1,0 +1,6 @@
+# Dependencias SOLO para regenerar el PDF del reporte (report/build_pdf.py).
+# No son necesarias para el pipeline ni la app.
+#   pip install -r report/requirements-report.txt
+#   python report/build_pdf.py
+markdown==3.10.2
+xhtml2pdf==0.2.17

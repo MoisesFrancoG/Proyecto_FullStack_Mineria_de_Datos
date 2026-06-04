@@ -1,0 +1,22 @@
+# Entorno virtual y cache de Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Herramientas locales del IDE / preview
+.claude/
+
+# Artefactos BINARIOS regenerables por el pipeline.
+# Reconstruir con:  python -m ml.src.run_pipeline
+data/processed/
+ml/models/*.joblib
+
+# Temporales
+report/_check_*.png
+*.tmp
+*.log
+
+# Se MANTIENEN en el repo (texto pequeño / entregables):
+#   data/raw/games.csv, ml/models/*_metrics.json, ml/reports/figures/*.png,
+#   ml/reports/*.json, report/reporte.pdf

@@ -1,0 +1,40 @@
+{
+  "n_juegos": 50872,
+  "n_juegos_pago": 40782,
+  "rango_fechas": [
+    "1997-06-30",
+    "2023-10-24"
+  ],
+  "precio_original": {
+    "media": 10.89,
+    "mediana": 7.99,
+    "skew": 5.16,
+    "max": 299.99
+  },
+  "user_reviews": {
+    "mediana": 49,
+    "max": 7494460,
+    "skew_crudo": 137.75,
+    "skew_log": 1.29
+  },
+  "well_received_balance": {
+    "positivo_pct": 71.7,
+    "conteos": {
+      "1": 36489,
+      "0": 14383
+    }
+  },
+  "rating_counts": {
+    "Positive": 13502,
+    "Very Positive": 13139,
+    "Mixed": 12157,
+    "Mostly Positive": 8738,
+    "Mostly Negative": 1849,
+    "Overwhelmingly Positive": 1110,
+    "Negative": 303,
+    "Very Negative": 60,
+    "Overwhelmingly Negative": 14
+  },
+  "corr_release_year_vs_age": -0.996,
+  "corr_positive_ratio_vs_rating_ordinal": 0.866
+}

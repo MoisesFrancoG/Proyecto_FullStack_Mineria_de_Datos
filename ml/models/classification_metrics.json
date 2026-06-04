@@ -1,0 +1,145 @@
+{
+  "task": "classification",
+  "target": "well_received",
+  "positivo_pct_train": 71.73,
+  "n_train": 40697,
+  "n_test": 10175,
+  "features": [
+    "game_age_years",
+    "price_original",
+    "log_user_reviews",
+    "platform_combo",
+    "is_free"
+  ],
+  "excluidas_por_fuga": [
+    "positive_ratio",
+    "rating",
+    "rating_ordinal"
+  ],
+  "modelos": {
+    "NaiveBayes": {
+      "cv_f1_macro_mean": 0.4446,
+      "cv_f1_macro_std": 0.048,
+      "test": {
+        "accuracy": 0.7171,
+        "balanced_accuracy": 0.5008,
+        "f1_macro": 0.4203,
+        "roc_auc": 0.6357,
+        "pr_auc": 0.8089,
+        "por_clase": {
+          "no_recibido_0": {
+            "precision": 0.4706,
+            "recall": 0.0028,
+            "f1": 0.0055,
+            "support": 2877
+          },
+          "bien_recibido_1": {
+            "precision": 0.7176,
+            "recall": 0.9988,
+            "f1": 0.8351,
+            "support": 7298
+          }
+        }
+      }
+    },
+    "KNN": {
+      "cv_f1_macro_mean": 0.5304,
+      "cv_f1_macro_std": 0.0056,
+      "test": {
+        "accuracy": 0.712,
+        "balanced_accuracy": 0.5475,
+        "f1_macro": 0.5355,
+        "roc_auc": 0.651,
+        "pr_auc": 0.8141,
+        "por_clase": {
+          "no_recibido_0": {
+            "precision": 0.4741,
+            "recall": 0.1689,
+            "f1": 0.2491,
+            "support": 2877
+          },
+          "bien_recibido_1": {
+            "precision": 0.7387,
+            "recall": 0.9261,
+            "f1": 0.8219,
+            "support": 7298
+          }
+        }
+      }
+    },
+    "LogisticRegression": {
+      "cv_f1_macro_mean": 0.5754,
+      "cv_f1_macro_std": 0.0094,
+      "test": {
+        "accuracy": 0.6018,
+        "balanced_accuracy": 0.6155,
+        "f1_macro": 0.5783,
+        "roc_auc": 0.6488,
+        "pr_auc": 0.8208,
+        "por_clase": {
+          "no_recibido_0": {
+            "precision": 0.3801,
+            "recall": 0.6472,
+            "f1": 0.4789,
+            "support": 2877
+          },
+          "bien_recibido_1": {
+            "precision": 0.8076,
+            "recall": 0.5839,
+            "f1": 0.6777,
+            "support": 7298
+          }
+        }
+      }
+    },
+    "DecisionTree": {
+      "cv_f1_macro_mean": 0.5775,
+      "cv_f1_macro_std": 0.0079,
+      "test": {
+        "accuracy": 0.6014,
+        "balanced_accuracy": 0.618,
+        "f1_macro": 0.5791,
+        "roc_auc": 0.6546,
+        "pr_auc": 0.8204,
+        "por_clase": {
+          "no_recibido_0": {
+            "precision": 0.381,
+            "recall": 0.6562,
+            "f1": 0.4821,
+            "support": 2877
+          },
+          "bien_recibido_1": {
+            "precision": 0.8105,
+            "recall": 0.5797,
+            "f1": 0.676,
+            "support": 7298
+          }
+        }
+      }
+    }
+  },
+  "modelo_elegido": "DecisionTree",
+  "metricas_test": {
+    "accuracy": 0.6014,
+    "balanced_accuracy": 0.618,
+    "f1_macro": 0.5791,
+    "roc_auc": 0.6546,
+    "pr_auc": 0.8204,
+    "por_clase": {
+      "no_recibido_0": {
+        "precision": 0.381,
+        "recall": 0.6562,
+        "f1": 0.4821,
+        "support": 2877
+      },
+      "bien_recibido_1": {
+        "precision": 0.8105,
+        "recall": 0.5797,
+        "f1": 0.676,
+        "support": 7298
+      }
+    }
+  },
+  "metrica_seleccion": "f1_macro (CV estratificada)",
+  "nota_metrica": "Datos desbalanceados (71.7% positivo): se prioriza F1-macro, balanced accuracy y ROC/PR-AUC sobre accuracy."
+}
